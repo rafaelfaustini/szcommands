@@ -1,0 +1,5 @@
+name: SZCommands
+version: ${project.version}
+main: szcommands.szcommands.SZCommands
+authors: [RafaelFaustini]
+website: www.rafaelfaustini.com.br
