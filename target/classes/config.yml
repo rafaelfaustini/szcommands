@@ -1,0 +1,8 @@
+God:
+  - 'You are now invincible'
+  - 'You are no longer invincible'
+Fly:
+  - 'You are now flying'
+  - 'You are no longer flying'
+Feed: 'You were fed'
+Heal: 'You were healed'

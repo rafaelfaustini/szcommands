@@ -7,3 +7,12 @@ commands:
   god:
     description: Triggers your vulnerability
     aliases: [invulnerable,invincible,deus,invencivel,invencível,invulnerabel,imortal]
+  feed:
+    description: Feeds the player
+    aliases: [alimentar,tirarfome]
+  heal:
+    description: Heals the player
+    aliases: [curar,life]
+  fly:
+    description: Makes the player fly
+    aliases: [voar]

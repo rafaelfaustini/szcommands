@@ -8,8 +8,10 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 import szcommands.szcommands.SZCommands;
 
+public class Fly implements CommandExecutor  {
 
-public class God implements CommandExecutor {
+
+
     Plugin plugin = SZCommands.getPlugin(SZCommands.class);
 
     @Override
@@ -19,16 +21,22 @@ public class God implements CommandExecutor {
 
 
             Player player = (Player) sender;
-            if(player.isInvulnerable()){
-                String texto = plugin.getConfig().getStringList("God").get(1);
+            if(player.getAllowFlight()){
+                String texto = plugin.getConfig().getStringList("Fly").get(1);
                 player.sendMessage(ChatColor.GOLD +texto);
-                player.setInvulnerable(false);
+                player.setAllowFlight(false);
             } else{
-                String texto = plugin.getConfig().getStringList("God").get(0);
+                String texto = plugin.getConfig().getStringList("Fly").get(0);
                 player.sendMessage(ChatColor.GOLD +texto);
-                player.setInvulnerable(true);
+                player.setAllowFlight(true);
+
             }
         }
         return true;
     }
+
+
+
+
+
 }
