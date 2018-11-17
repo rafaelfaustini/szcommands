@@ -1,10 +1,7 @@
 package szcommands.szcommands;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import szcommands.szcommands.commands.Feed;
-import szcommands.szcommands.commands.Fly;
-import szcommands.szcommands.commands.God;
-import szcommands.szcommands.commands.Heal;
+import szcommands.szcommands.commands.*;
 
 public final class SZCommands extends JavaPlugin {
 
@@ -17,6 +14,8 @@ public final class SZCommands extends JavaPlugin {
         getCommand("feed").setExecutor(new Feed());
         getCommand("heal").setExecutor(new Heal());
         getCommand("fly").setExecutor(new Fly());
+        getCommand("day").setExecutor(new Day());
+        getCommand("night").setExecutor(new Night());
 
     }
 

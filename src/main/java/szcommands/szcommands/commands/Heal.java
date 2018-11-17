@@ -14,8 +14,15 @@ public class Heal implements CommandExecutor{
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(sender instanceof Player){
-            String texto = plugin.getConfig().getString("Heal");
+
             Player player = (Player) sender;
+
+            if(!player.hasPermission("szcommands.heal")) {
+                String texto = plugin.getConfig().getString("NoPermission");
+                player.sendMessage(ChatColor.RED+texto);
+                return false;
+            }
+            String texto = plugin.getConfig().getString("Heal");
             player.setHealth(20);
             player.sendMessage(ChatColor.GREEN+texto);
         }

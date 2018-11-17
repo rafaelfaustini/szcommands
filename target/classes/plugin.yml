@@ -16,3 +16,10 @@ commands:
   fly:
     description: Makes the player fly
     aliases: [voar]
+  day:
+    description: Set current world time day
+    aliases: [dia]
+  night:
+    description: Set current world time night
+    aliases: [noite]
+  tp:

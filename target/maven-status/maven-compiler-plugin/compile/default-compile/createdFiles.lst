@@ -1,5 +1,7 @@
 szcommands\szcommands\commands\Heal.class
 szcommands\szcommands\commands\Fly.class
+szcommands\szcommands\commands\Day.class
 szcommands\szcommands\SZCommands.class
 szcommands\szcommands\commands\Feed.class
 szcommands\szcommands\commands\God.class
+szcommands\szcommands\commands\Night.class

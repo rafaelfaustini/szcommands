@@ -8,42 +8,29 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 import szcommands.szcommands.SZCommands;
 
-public class Fly implements CommandExecutor  {
 
+public class Day implements CommandExecutor{
 
 
     Plugin plugin = SZCommands.getPlugin(SZCommands.class);
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-
         if(sender instanceof Player){
-
 
             Player player = (Player) sender;
 
-            if(!player.hasPermission("szcommands.fly")) {
+            if(!player.hasPermission("szcommands.day")) {
                 String texto = plugin.getConfig().getString("NoPermission");
                 player.sendMessage(ChatColor.RED+texto);
                 return false;
             }
-
-            if(player.getAllowFlight()){
-                String texto = plugin.getConfig().getStringList("Fly").get(1);
-                player.sendMessage(ChatColor.GOLD +texto);
-                player.setAllowFlight(false);
-            } else{
-                String texto = plugin.getConfig().getStringList("Fly").get(0);
-                player.sendMessage(ChatColor.GOLD +texto);
-                player.setAllowFlight(true);
-
-            }
+            String texto = plugin.getConfig().getString("Day");
+            player.getLocation().getWorld().setTime(0);
+            player.sendMessage(ChatColor.GREEN+texto);
         }
         return true;
     }
-
-
-
 
 
 }

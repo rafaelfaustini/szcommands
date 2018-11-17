@@ -1,3 +1,4 @@
+NoPermission: 'Insufficient permissions to execute this command'
 God:
   - 'You are now invincible'
   - 'You are no longer invincible'
@@ -6,3 +7,5 @@ Fly:
   - 'You are no longer flying'
 Feed: 'You were fed'
 Heal: 'You were healed'
+Day: 'Enjoy that beautiful day'
+Night: "\"It was the possibility of darkness that made the day seem so bright.\" ― Stephen King"

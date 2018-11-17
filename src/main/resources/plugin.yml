@@ -19,3 +19,7 @@ commands:
   day:
     description: Set current world time day
     aliases: [dia]
+  night:
+    description: Set current world time night
+    aliases: [noite]
+  tp:

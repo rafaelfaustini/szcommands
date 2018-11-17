@@ -19,6 +19,12 @@ public class God implements CommandExecutor {
 
 
             Player player = (Player) sender;
+            if(!player.hasPermission("szcommands.god")) {
+                String texto = plugin.getConfig().getString("NoPermission");
+                player.sendMessage(ChatColor.RED+texto);
+                return false;
+            }
+
             if(player.isInvulnerable()){
                 String texto = plugin.getConfig().getStringList("God").get(1);
                 player.sendMessage(ChatColor.GOLD +texto);
