@@ -24,10 +24,10 @@ public class God implements CommandExecutor {
 
             Player player = (Player) sender;
             if(player.isInvulnerable()){
-                player.sendMessage(ChatColor.GOLD +frase[1]+label);
+                player.sendMessage(ChatColor.GOLD +frase[1]);
                 player.setInvulnerable(false);
             } else{
-                player.sendMessage(ChatColor.GOLD +frase[0]+label);
+                player.sendMessage(ChatColor.GOLD +frase[0]);
                 player.setInvulnerable(true);
             }
         }
